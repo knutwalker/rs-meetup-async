@@ -1,0 +1,49 @@
+[package]
+name = "rs-meetup-async"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.7.4"
+eyre = "0.6.11"
+futures = "0.3.30"
+progress_bar = "1.0.5"
+rand = "0.8.5"
+rayon = "1.8.0"
+reqwest = { version = "0.11.23", features = ["blocking"] }
+serde = { version = "1.0.195", features = ["derive"] }
+tokio = { version = "1.35.1", features = ["full"] }
+
+[[bin]]
+name = "server"
+path = "src/server.rs"
+
+[[bin]]
+name = "sync"
+path = "src/sync.rs"
+
+[[bin]]
+name = "parallel"
+path = "src/parallel.rs"
+
+[[bin]]
+name = "concurrent"
+path = "src/concurrent.rs"
+
+[[bin]]
+name = "concurrent_working"
+path = "src/concurrent_working.rs"
+
+[[bin]]
+name = "concurrent_limit"
+path = "src/concurrent_limit.rs"
+
+[[bin]]
+name = "concurrent_stream"
+path = "src/concurrent_stream.rs"
+
+[[bin]]
+name = "concurrent_parallel"
+path = "src/concurrent_parallel.rs"
